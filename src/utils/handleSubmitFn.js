@@ -1,7 +1,7 @@
 const handleSubmitFn = async (formData, setLoading, setCoverLetter) => {
   setLoading(true);
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/generate/', {
+    const response = await fetch("https://covergenie-backend.onrender.com/api/generate_cover_letter/", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
