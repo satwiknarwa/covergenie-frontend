@@ -1,7 +1,7 @@
 const handleSubmitFn = async (formData, setLoading, setCoverLetter) => {
   setLoading(true);
   try {
-    const response = await fetch("https://covergenie-backend.onrender.com/api/generate_cover_letter/", {
+    const response = await fetch("https://covergenie-backend-eoeg.onrender.com/api/generate-cover-letter/", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
