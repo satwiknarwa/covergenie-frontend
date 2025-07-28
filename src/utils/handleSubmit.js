@@ -5,7 +5,7 @@ const handleSubmit = async (formData, setLoading, setCoverLetter) => {
   setCoverLetter('');
 
   try {
-    const response = await axios.post('http://127.0.0.1:8000/api/generate-cover-letter/', formData);
+    const response = await axios.post('https://covergenie-backend-eoeg.onrender.com/api/generate-cover-letter/', formData);
     setCoverLetter(response.data.cover_letter);
   } catch (error) {
     console.error(error);
