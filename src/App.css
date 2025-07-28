@@ -1,38 +1,206 @@
-.App {
+/* Smooth scrolling for internal links */
+html {
+  scroll-behavior: smooth;
+}
+/* App.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* rest of your CSS */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Your navbar, form, hero, etc. styles */
+
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #1e293b;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e293b;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #38bdf8;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(to bottom right, #e0f2fe, #f0f9ff);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #334155;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Form Section */
+.cover-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cover-form input,
+.cover-form textarea {
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s;
+  background-color: #f8fafc;
+}
+
+.cover-form input:focus,
+.cover-form textarea:focus {
+  border-color: #38bdf8;
+  background-color: #ffffff;
+}
+
+.cover-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.cover-form button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cover-form button:hover {
+  background-color: #1e40af;
+}
+
+
+/* Result Box */
+.result-box {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #f1f5f9;
+  padding: 30px;
+  border-radius: 16px;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer with embedded About section */
+.footer {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-about {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.footer-about h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-about p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .hero h1 {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .cover-form {
+    padding: 20px;
+  }
+
+  .cover-form input,
+  .cover-form textarea {
+    width: 100%;
+  }
+
+  .result-box pre {
+    font-size: 0.9rem;
+  }
+
+  .footer-about h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer-about p {
+    font-size: 0.9rem;
   }
 }
